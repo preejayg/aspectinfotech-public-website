@@ -7,12 +7,12 @@ import { SITE_TITLE, BOOKING_LINK } from '../consts';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/#services">Services</HeaderLink>
+			<HeaderLink href="/#offers">Offers</HeaderLink>
 			<HeaderLink href="/#assessment">Assessment</HeaderLink>
 			<HeaderLink href="/#contact">Contact</HeaderLink>
 		</div>
 		<div class="cta-links">
-			<a class="book" href={BOOKING_LINK}>Book free assessment</a>
+			<a class="book" href={BOOKING_LINK} target="_blank" rel="noreferrer">Book assessment</a>
 		</div>
 	</nav>
 </header>
@@ -21,19 +21,17 @@ import { SITE_TITLE, BOOKING_LINK } from '../consts';
 		position: sticky;
 		top: 0;
 		z-index: 20;
-		margin: 0;
 		padding: 0 1rem;
 		backdrop-filter: blur(18px);
-		background: rgba(255, 255, 255, 0.86);
-		border-bottom: 1px solid rgba(var(--gray-light), 0.8);
+		background: rgba(255, 255, 255, 0.78);
+		border-bottom: 1px solid rgba(216, 225, 239, 0.85);
 	}
 	h2 {
 		margin: 0;
 		font-size: 1rem;
 		line-height: 1.2;
-		max-width: 16rem;
+		max-width: 15rem;
 	}
-
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
@@ -44,54 +42,59 @@ import { SITE_TITLE, BOOKING_LINK } from '../consts';
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
-		max-width: 1120px;
+		width: min(1120px, calc(100% - 0.5rem));
 		margin: 0 auto;
+		min-height: 74px;
 	}
-	.internal-links,
+	.internal-links {
+		display: flex;
+		gap: 1.25rem;
+		align-items: center;
+		flex: 1;
+		justify-content: center;
+	}
 	.cta-links {
 		display: flex;
 		align-items: center;
-		gap: 0.25rem;
 	}
 	.book {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0.8rem 1rem;
+		padding: 0.75rem 1rem;
 		border-radius: 999px;
 		background: rgb(var(--black));
 		color: white;
-		text-decoration: none;
 		font-weight: 700;
+		text-decoration: none;
 		transition: transform 0.2s ease, opacity 0.2s ease;
 	}
 	.book:hover {
-		color: white;
-		opacity: 0.9;
+		opacity: 0.93;
 		transform: translateY(-1px);
+		color: white;
 	}
-	@media (max-width: 860px) {
+	@media (max-width: 820px) {
 		nav {
 			flex-wrap: wrap;
-			justify-content: center;
-			padding: 0.35rem 0;
+			padding: 0.5rem 0;
+			min-height: auto;
 		}
 		h2 {
-			width: 100%;
 			max-width: none;
-			text-align: center;
-		}
-	}
-	@media (max-width: 720px) {
-		.internal-links {
 			width: 100%;
-			justify-content: center;
+		}
+		.internal-links {
+			justify-content: flex-start;
+			width: 100%;
+			gap: 1rem;
 			flex-wrap: wrap;
 		}
 		.cta-links {
 			width: 100%;
-			justify-content: center;
-			padding-bottom: 0.5rem;
+		}
+		.book {
+			width: 100%;
 		}
 	}
 </style>

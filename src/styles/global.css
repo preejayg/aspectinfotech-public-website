@@ -1,21 +1,22 @@
 /*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+  Global styles for Aspect Infotech.
+  A lightweight marketing site with a polished, outcome-led layout.
+*/
 
 :root {
 	--accent: #0f766e;
 	--accent-dark: #115e59;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
+	--gray-light: 225, 231, 241;
 	--gray-dark: 34, 41, 57;
 	--gray-gradient: rgba(229, 233, 240, 0.55), #fff;
 	--box-shadow:
-		0 2px 6px rgba(var(--gray), 18%), 0 8px 24px rgba(var(--gray), 18%),
-		0 16px 32px rgba(var(--gray), 18%);
+		0 2px 6px rgba(var(--gray), 12%), 0 10px 30px rgba(var(--gray), 12%),
+		0 24px 48px rgba(var(--gray), 14%);
+	--surface: rgba(255, 255, 255, 0.84);
 }
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -23,6 +24,7 @@
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-bold.woff') format('woff');
@@ -30,30 +32,34 @@
 	font-style: normal;
 	font-display: swap;
 }
+
 html {
 	scroll-behavior: smooth;
 }
+
 body {
-	font-family: 'Atkinson', sans-serif;
+	font-family: 'Atkinson', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
 	background:
-		radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 30%),
+		radial-gradient(circle at 12% 10%, rgba(15, 118, 110, 0.16), transparent 24%),
+		radial-gradient(circle at 88% 0%, rgba(15, 118, 110, 0.1), transparent 28%),
 		linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background-size: 100% 760px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
 	font-size: 20px;
 	line-height: 1.7;
 }
+
 main {
-	width: 1120px;
-	max-width: calc(100% - 2rem);
+	width: min(1120px, calc(100% - 2rem));
 	margin: auto;
-	padding: 2rem 1rem 4rem;
+	padding: 2rem 0 4rem;
 }
+
 h1,
 h2,
 h3,
@@ -62,66 +68,67 @@ h5,
 h6 {
 	margin: 0 0 0.65rem 0;
 	color: rgb(var(--black));
-	line-height: 1.15;
+	line-height: 1.08;
 }
+
 h1 {
-	font-size: clamp(2.5rem, 6vw, 4.8rem);
+	font-size: clamp(2.7rem, 7vw, 5.2rem);
+	letter-spacing: -0.04em;
 }
+
 h2 {
-	font-size: clamp(1.8rem, 4vw, 2.75rem);
+	font-size: clamp(1.9rem, 4vw, 2.8rem);
+	letter-spacing: -0.03em;
 }
+
 h3 {
 	font-size: clamp(1.35rem, 2.6vw, 1.8rem);
 }
+
 strong,
 b {
 	font-weight: 700;
 }
+
 a {
 	color: var(--accent);
 }
+
 a:hover {
 	color: var(--accent-dark);
 }
+
 p {
 	margin-bottom: 1rem;
 }
-textarea,
-input,
-select {
-	width: 100%;
-	font-size: 16px;
-}
-button {
-	font: inherit;
-}
+
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 16px;
 }
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 4px;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0;
-	font-size: 1.1em;
-}
+
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
-.section {
-	padding: 2.5rem 0;
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
 }
+
+.section {
+	padding: 2.8rem 0;
+}
+
 .section-head {
 	max-width: 760px;
 	margin-bottom: 1.5rem;
 }
+
 .kicker {
 	display: inline-flex;
 	align-items: center;
@@ -130,23 +137,45 @@ hr {
 	border-radius: 999px;
 	background: rgba(15, 118, 110, 0.1);
 	color: var(--accent-dark);
-	font-size: 0.9rem;
+	font-size: 0.86rem;
 	font-weight: 700;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
 }
+
 .card-grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1rem;
 }
+
 .card {
 	padding: 1.4rem;
-	border: 1px solid rgba(var(--gray-light), 0.95);
+	border: 1px solid rgba(216, 225, 239, 0.95);
 	border-radius: 24px;
-	background: rgba(255, 255, 255, 0.82);
+	background: var(--surface);
 	box-shadow: var(--box-shadow);
+	backdrop-filter: blur(10px);
 }
+
+.feature-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.card-label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 14px;
+	margin-bottom: 1rem;
+	background: rgba(15, 118, 110, 0.12);
+	color: var(--accent-dark);
+	font-weight: 700;
+}
+
 .pill-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -154,7 +183,9 @@ hr {
 	padding: 0;
 	list-style: none;
 }
-.pill-list li {
+
+.pill-list li,
+.trust-row span {
 	padding: 0.55rem 0.85rem;
 	border-radius: 999px;
 	background: rgba(15, 118, 110, 0.08);
@@ -162,12 +193,15 @@ hr {
 	font-weight: 700;
 	font-size: 0.95rem;
 }
-.cta-row {
+
+.cta-row,
+.mini-cta-row {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.8rem;
-	margin-top: 1.5rem;
+	margin-top: 1.4rem;
 }
+
 .button,
 .button-secondary {
 	display: inline-flex;
@@ -177,109 +211,173 @@ hr {
 	border-radius: 999px;
 	text-decoration: none;
 	font-weight: 700;
-	transition: transform 0.2s ease, opacity 0.2s ease;
+	transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
+
 .button {
 	background: rgb(var(--black));
 	color: white;
+	box-shadow: 0 12px 28px rgba(15, 18, 25, 0.2);
 }
+
 .button:hover {
 	color: white;
-	opacity: 0.92;
+	opacity: 0.94;
 	transform: translateY(-1px);
 }
+
 .button-secondary {
-	border: 1px solid rgba(var(--gray-light), 0.95);
+	border: 1px solid rgba(216, 225, 239, 0.95);
 	background: white;
 	color: rgb(var(--black));
 }
+
 .button-secondary:hover {
 	color: rgb(var(--black));
 	transform: translateY(-1px);
 }
+
 .hero {
 	display: grid;
-	grid-template-columns: 1.25fr 0.95fr;
-	gap: 2rem;
-	align-items: center;
-	padding: 4.5rem 0 3rem;
+	grid-template-columns: 1.15fr 0.95fr;
+	gap: 1.5rem;
+	align-items: stretch;
+	padding: 4.2rem 0 3rem;
 }
+
 .hero-copy {
-	max-width: 42rem;
+	max-width: 43rem;
+	padding-right: 1rem;
 }
-.hero-copy p {
-	font-size: 1.05rem;
+
+.lede {
+	font-size: 1.08rem;
 	max-width: 38rem;
 }
+
 .hero-panel {
-	padding: 1.5rem;
-	border-radius: 28px;
-	background: rgba(255, 255, 255, 0.86);
-	border: 1px solid rgba(var(--gray-light), 0.9);
+	padding: 1.35rem;
+	border-radius: 30px;
+	background:
+		linear-gradient(180deg, rgba(15, 118, 110, 0.06), rgba(255, 255, 255, 0.92)),
+		var(--surface);
+	border: 1px solid rgba(216, 225, 239, 0.95);
 	box-shadow: var(--box-shadow);
+	backdrop-filter: blur(12px);
 }
+
+.panel-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.4rem 0.8rem;
+	border-radius: 999px;
+	margin-bottom: 1rem;
+	background: rgba(15, 118, 110, 0.12);
+	color: var(--accent-dark);
+	font-size: 0.86rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
 .stat-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 0.85rem;
-	margin-top: 1rem;
 }
+
 .stat {
 	padding: 1rem;
 	border-radius: 18px;
-	background: rgba(15, 118, 110, 0.06);
+	background: white;
+	border: 1px solid rgba(216, 225, 239, 0.9);
 }
+
 .stat strong {
 	display: block;
-	font-size: 1.2rem;
+	font-size: 1.08rem;
 	color: rgb(var(--black));
+	margin-bottom: 0.35rem;
 }
+
 .stat span {
 	font-size: 0.92rem;
+	color: rgb(var(--gray-dark));
 }
+
 .split-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1.1fr 0.9fr;
 	gap: 1rem;
 }
+
 .small-note {
 	font-size: 0.95rem;
 	color: rgb(var(--gray));
 }
-#contact .card {
+
+.assessment-card {
 	height: 100%;
 }
+
 .formbox {
 	padding: 1.4rem;
 	border-radius: 24px;
-	background: rgb(255, 255, 255);
-	border: 1px solid rgba(var(--gray-light), 0.95);
+	background: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(216, 225, 239, 0.95);
 	box-shadow: var(--box-shadow);
+	backdrop-filter: blur(10px);
 }
+
 .formbox ul {
 	margin: 0;
 	padding-left: 1.15rem;
 }
+
+.formbox li {
+	margin-bottom: 0.5rem;
+}
+
+.trust-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin-top: 1.25rem;
+}
+
+.trust-row span {
+	background: rgba(15, 118, 110, 0.1);
+}
+
 @media (max-width: 940px) {
 	.card-grid,
 	.hero,
 	.split-grid {
 		grid-template-columns: 1fr;
 	}
+
+	.hero-copy {
+		padding-right: 0;
+	}
+
+	.stat-grid {
+		grid-template-columns: 1fr;
+	}
 }
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
+		background-size: 100% 560px;
 	}
+
 	main {
-		max-width: calc(100% - 1rem);
+		width: min(1120px, calc(100% - 1rem));
 		padding: 1rem 0 3rem;
 	}
+
 	.hero {
-		padding-top: 2.2rem;
-	}
-	.stat-grid {
-		grid-template-columns: 1fr;
+		padding-top: 2rem;
 	}
 }
 
