@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, BOOKING_LINK, CONTACT_EMAIL } from '../consts';
 ---
 
 <!doctype html>
@@ -13,37 +13,128 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<div class="hero-copy">
+					<span class="kicker">Aspect Infotech</span>
+					<h1>Secure digital workplace solutions for growing Australian businesses.</h1>
+					<p>
+						We help small businesses design and implement a modern workplace using Microsoft 365.
+						The result is better email, collaboration, document management, device control,
+						security and AI-ready productivity.
+					</p>
+					<div class="cta-row">
+						<a class="button" href={BOOKING_LINK}>Book a free 30-minute assessment</a>
+						<a class="button-secondary" href="#services">See the 3 offers</a>
+					</div>
+					<p class="small-note">
+						Best suited to Australian businesses with 5–25 staff who want a practical, outcome-based
+						approach to the digital workplace.
+					</p>
+				</div>
+				<div class="hero-panel">
+					<h3>What we help you achieve</h3>
+					<div class="stat-grid">
+						<div class="stat"><strong>Business email</strong><span>Professional mailboxes and identity setup</span></div>
+						<div class="stat"><strong>Collaboration</strong><span>Teams and shared working that staff will use</span></div>
+						<div class="stat"><strong>Documents</strong><span>SharePoint and OneDrive that make files easy to find</span></div>
+						<div class="stat"><strong>Security</strong><span>Intune, Entra ID and zero-trust foundations</span></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="outcomes">
+				<div class="section-head">
+					<span class="kicker">Outcomes</span>
+					<h2>What a better workplace looks like</h2>
+					<p>
+						Your staff should be able to work securely, find information quickly and use the right tools
+						without needing enterprise complexity.
+					</p>
+				</div>
+				<ul class="pill-list">
+					<li>Business email</li>
+					<li>Collaboration</li>
+					<li>Document management</li>
+					<li>Device management</li>
+					<li>Security</li>
+					<li>AI productivity</li>
+					<li>Business processes</li>
+				</ul>
+			</section>
+
+			<section class="section" id="services">
+				<div class="section-head">
+					<span class="kicker">Services</span>
+					<h2>Three offers, each with a clear outcome</h2>
+					<p>
+						The goal is to move from assessment to implementation, without locking you into a heavy
+						ongoing support commitment.
+					</p>
+				</div>
+				<div class="card-grid">
+					<div class="card">
+						<h3>Digital Workplace Foundation</h3>
+						<p>Set up the core digital workplace for a new or growing business.</p>
+						<p><strong>Includes:</strong> Microsoft 365, email, Teams, SharePoint, OneDrive, MFA, onboarding.</p>
+					</div>
+					<div class="card">
+						<h3>Secure Workplace</h3>
+						<p>Strengthen identity, access and device security.</p>
+						<p><strong>Includes:</strong> Intune, Entra ID, device compliance, conditional access and baseline security.</p>
+					</div>
+					<div class="card">
+						<h3>AI Workplace Readiness</h3>
+						<p>Prepare the business for Microsoft Copilot and productivity gains.</p>
+						<p><strong>Includes:</strong> information review, permissions review, readiness assessment and roadmap.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="assessment">
+				<div class="split-grid">
+					<div class="card">
+						<span class="kicker">Free assessment</span>
+						<h2>Start with a 30-minute Digital Workplace Assessment</h2>
+						<p>
+							We review your current email, collaboration, document management, device management,
+							security and productivity setup, then provide practical recommendations.
+						</p>
+						<p>
+							This is a discovery conversation, not a long questionnaire. We complete the assessment
+							together and you leave with concrete next steps.
+						</p>
+					</div>
+					<div class="formbox">
+						<h3>What we look for</h3>
+						<ul>
+							<li>How many users and devices you have</li>
+							<li>What tools you use today</li>
+							<li>What you currently spend on productivity software</li>
+							<li>Where the pain points are</li>
+							<li>Which offer fits best</li>
+						</ul>
+						<p class="small-note">
+							The aim is to identify a clear recommendation that leads to implementation work and
+							ongoing license management.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="contact">
+				<div class="section-head">
+					<span class="kicker">Contact</span>
+					<h2>Ready to book your assessment?</h2>
+					<p>
+						If you are a small Australian business and want a practical digital workplace plan, book a
+						free assessment or send a quick email.
+					</p>
+				</div>
+				<div class="cta-row">
+					<a class="button" href={BOOKING_LINK}>Book the free assessment</a>
+					<a class="button-secondary" href={`mailto:${CONTACT_EMAIL}`}>Email us</a>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>
