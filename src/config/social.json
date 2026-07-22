@@ -1,0 +1,44 @@
+{
+  "main": [
+    {
+      "enable": true,
+      "label": "LinkedIn",
+      "lucideIcon": "linkedin",
+      "url": "https://www.linkedin.com/company/aspectinfotech",
+      "isForShare": false,
+      "isForShareProject": true
+    },
+    {
+      "enable": false,
+      "label": "Facebook",
+      "lucideIcon": "facebook",
+      "url": "https://www.facebook.com",
+      "isForShare": false,
+      "isForShareProject": false
+    },
+    {
+      "enable": false,
+      "label": "Twitter",
+      "lucideIcon": "twitter-new",
+      "url": "https://www.x.com",
+      "isForShare": false,
+      "isForShareProject": false
+    },
+    {
+      "enable": false,
+      "label": "Instagram",
+      "lucideIcon": "instagram",
+      "url": "https://www.instagram.com",
+      "isForShare": false,
+      "isForShareProject": false
+    },
+    {
+      "enable": true,
+      "label": "Mail",
+      "lucideIcon": "mail",
+      "url": "mailto:contact@aspectinfotech.com",
+      "isForShare": false,
+      "isForShareProject": false
+    }
+  ]
+}
