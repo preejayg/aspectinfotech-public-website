@@ -2,7 +2,7 @@
 enable: true
 badge: "// HOW IT WORKS"
 title: "Three simple steps to your secure digital workplace"
-image: "/images/service/working-process.png"
+image: "/images/service/working-process.jpg"
 list:
   - title: "Book your free assessment"
     description: "Schedule a free 30-minute Digital Workplace Assessment. We review your current setup across email, identity, collaboration, devices, security, and AI readiness."
