@@ -84,13 +84,13 @@ const { hasSectionSpacing = true } = Astro.props;
         {/* Form */}
         {form && <ContactForm form={form} />}
 
-        {/* Business details */}
-        <div class="border-white/10 text-text-inverse/50 border-t pt-6 text-sm leading-relaxed">
-          <div class="flex flex-wrap gap-x-8 gap-y-1">
-            <span><span class="text-text-inverse/70 font-medium">ABN</span> 99 659 837 653</span>
-            <span><span class="text-text-inverse/70 font-medium">ACN</span> 659 837 653</span>
-          </div>
-          <p class="mt-1">Level 1, 63–73 Ann Street, Surry Hills NSW 2010</p>
+        {/* Registered office */}
+        <div class="border-white/10 border-t pt-6">
+          <p class="text-text-inverse/40 mb-2 text-xs font-semibold uppercase tracking-widest">Registered Office</p>
+          <p class="text-text-inverse/70 text-sm leading-relaxed">Level 1, 63–73 Ann Street, Surry Hills NSW 2010</p>
+          <p class="text-text-inverse/40 mt-2 text-xs">
+            ABN&nbsp;99&nbsp;659&nbsp;837&nbsp;653 &nbsp;·&nbsp; ACN&nbsp;659&nbsp;837&nbsp;653
+          </p>
         </div>
       </div>
       {/* 3D character bottom-right */}
